@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('안녕하세요.  인공지능 챗봇고 입니다!!!')
+    res.send('안녕하세요.  인공지능 챗봇고 입니다!!! 지금은 준비중인 서비스입니다.')
 })
 
 // for Facebook verification
@@ -43,7 +43,7 @@ app.post('/webhook/', function (req, res) {
                 sendGenericMessage(sender)
                 continue
             }
-            sendTextMessage(sender, "챗봇고, echo: " + text.substring(0, 200))
+            sendTextMessage(sender, "챗봇고, 에코: " + text.substring(0, 200))
         }
 
        if (event.postback) {
@@ -57,7 +57,6 @@ app.post('/webhook/', function (req, res) {
     }
     res.sendStatus(200)
 })
-
 
 
 const token = process.env.FB_PAGE_ACCESS_TOKEN
@@ -88,12 +87,12 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "First card",
-                    "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "title": "1번추천앱",
+                    "subtitle": "위버스",
+                    "image_url": "https://lh3.googleusercontent.com/6jBllD6Kv0mCRA8cKLddRnJ3zdMEze4Ddm0sz-uwVMZfqSBWTbp4sTgm6zgT4XAv7g=h900-rw",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.messenger.com",
+                        "url": "https://play.google.com/store/apps/details?id=kr.co.winko.webus",
                         "title": "web url"
                     }, {
                         "type": "postback",
@@ -106,8 +105,9 @@ function sendGenericMessage(sender) {
                     "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for second element in a generic bubble",
+                        "title": "인공지능 중고차앱",
+                        "url": "http://bbibi.co.kr",
+                        "payload": "오픈임박...",
                     }],
                 }]
             }
