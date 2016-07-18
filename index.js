@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         let sender = event.sender.id
         if (event.message && event.message.text) {
             let text = event.message.text
-            if (text === 'Generic') {
+            if (text === '위버스') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -97,7 +97,7 @@ function sendGenericMessage(sender) {
                     }, {
                         "type": "postback",
                         "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+                        "payload": "버스는 위버스에!!",
                     }],
                 }, {
                     "title": "Second card",
@@ -106,7 +106,6 @@ function sendGenericMessage(sender) {
                     "buttons": [{
                         "type": "postback",
                         "title": "인공지능 중고차앱",
-                        "url": "http://bbibi.co.kr",
                         "payload": "오픈임박...",
                     }],
                 }]
@@ -129,3 +128,8 @@ function sendGenericMessage(sender) {
         }
     })
 }
+
+// spin spin sugar
+app.listen(app.get('port'), function() {
+	console.log('running on port', app.get('port'))
+})
