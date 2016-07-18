@@ -34,7 +34,7 @@ app.post('/webhook/', function (req, res) {
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
 			let text = event.message.text
-			if (text === '앱') {
+			if (text === 'Generic') {
 				sendGenericMessage(sender)
 				continue
 			}
@@ -80,12 +80,12 @@ function sendGenericMessage(sender) {
 			"payload": {
 				"template_type": "generic",
 				"elements": [{
-					"title": "추천1번",
-					"subtitle": "",
-					"image_url": "https://lh3.googleusercontent.com/IUXjjTWXRWFzOecPdpPWG0PjAxNybw4Mu4Hc7z_KbwebfpeDtS9_5-g-VHxXXd7uyA=w300-rw",
+					"title": "First card",
+					"subtitle": "Element #1 of an hscroll",
+					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
 					"buttons": [{
 						"type": "web_url",
-						"url": "https://play.google.com/store/apps/details?id=kr.co.winko.webus",
+						"url": "https://www.messenger.com",
 						"title": "web url"
 					}, {
 						"type": "postback",
@@ -93,9 +93,9 @@ function sendGenericMessage(sender) {
 						"payload": "Payload for first element in a generic bubble",
 					}],
 				}, {
-					"title": "추천2번",
-					"subtitle": "삐비중고차",
-					"image_url": "http://bbibi.co.kr/images/auto_1800.jpg",
+					"title": "Second card",
+					"subtitle": "Element #2 of an hscroll",
+					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
 					"buttons": [{
 						"type": "postback",
 						"title": "Postback",
