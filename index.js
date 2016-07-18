@@ -38,7 +38,7 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+			sendTextMessage(sender, "챗봇고, echo: " + text.substring(0, 200))
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
@@ -86,11 +86,11 @@ function sendGenericMessage(sender) {
 					"buttons": [{
 						"type": "web_url",
 						"url": "https://play.google.com/store/apps/details?id=kr.co.winko.webus",
-						"title": "web url"
+						"title": "앱다운로드"
 					}, {
 						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for first element in a generic bubble",
+						"title": "설명",
+						"payload": "현재 절찬리 판매중입니다.",
 					}],
 				}, {
 					"title": "추천2번",
@@ -98,8 +98,8 @@ function sendGenericMessage(sender) {
 					"image_url": "http://bbibi.co.kr/images/auto_1800.jpg",
 					"buttons": [{
 						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for second element in a generic bubble",
+						"title": "설명",
+						"payload": "오픈준비중입니다.",
 					}],
 				}]
 			}
