@@ -4,7 +4,8 @@ var Config = require('../config')
 var FB = require('../connectors/facebook')
 //var Wit = require('node-wit').Wit
 
-let Wit = null;
+//let  Wit = null;
+var Wit = null;
 try {
   // if running from repo
   Wit = require('../').Wit;
