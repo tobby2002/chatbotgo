@@ -2,15 +2,15 @@
 
 var Config = require('../config')
 var FB = require('../connectors/facebook')
-var Wit = require('node-wit').Wit;
+//var Wit = require('node-wit').Wit
 
-//let Wit = null;
-//try {
-//  // if running from repo
-//  Wit = require('./').Wit;
-//} catch (e) {
-//  Wit = require('node-wit').Wit;
-//}
+let Wit = null;
+try {
+  // if running from repo
+  Wit = require('../').Wit;
+} catch (e) {
+  Wit = require('node-wit').Wit
+}
 
 var request = require('request')
 
