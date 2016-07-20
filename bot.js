@@ -32,9 +32,9 @@ var findOrCreateSession = function (fbid) {
 }
 
 var read = function (sender, message, reply) {
-	if (message === 'hello') {
+	if (message === '안녕') {
 		// Let's reply back hello
-		message = 'Hello yourself! I am a chat bot. You can say "show me pics of corgis"'
+		message = '안녕하세요! 챗봇고입니다. 다음과 같이 말해주세요 "show me pics of corgis"'
 		reply(sender, message)
 	} else {
 		// Let's find the user
