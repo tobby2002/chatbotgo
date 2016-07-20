@@ -22,7 +22,7 @@ app.use(bodyParser.json())
 
 // index page
 app.get('/', function (req, res) {
-  res.send('안녕, 여기는 챗봇윗')
+  res.send('만나서 반갑습니다, 고객님!<br/>인공지능 chatbotGO 입니다.<br/> 무엇을 도와 드릴까요?')
 })
 
 // for facebook to verify
