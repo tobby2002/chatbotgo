@@ -34,7 +34,7 @@ var findOrCreateSession = function (fbid) {
 var read = function (sender, message, reply) {
 	if (message === '안녕') {
 		// Let's reply back hello
-		message = '안녕하세요! 챗봇고입니다. 무엇을 도와드릴까요?<br> "예,show me pics of corgis"'
+		message = '안녕하세요! 챗봇고입니다. 무엇을 도와드릴까요? "예,show me pics of corgis"'
 		reply(sender, message)
 	} else {
 		// Let's find the user

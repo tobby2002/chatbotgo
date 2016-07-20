@@ -44,6 +44,9 @@ var actions = {
 	},
 
 	merge(sessionId, context, entities, message, cb) {
+
+                console.log('merge내에 있음...')
+
 		// Reset the weather story
 		delete context.forecast
 
