@@ -52,6 +52,9 @@ var actions = {
 
 		// Retrive the location entity and store it in the context field
 		var loc = firstEntityValue(entities, 'location')
+
+		console.log('loc:'+ loc)
+
 		if (loc) {
 			context.loc = loc
 		}
