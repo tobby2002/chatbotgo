@@ -40,7 +40,7 @@ app.post('/webhook', function (req, res) {
   if (entry && entry.message) {
     if (entry.message.attachments) {
       // NOT SMART ENOUGH FOR ATTACHMENTS YET
-      FB.newMessage(entry.sender.id, "That's interesting!")
+      FB.newMessage(entry.sender.id, "멋지군요!!")
     } else {
       // SEND TO BOT FOR PROCESSING
       Bot.read(entry.sender.id, entry.message.text, function (sender, reply) {
