@@ -47,7 +47,7 @@ var read = function (sender, message, reply) {
 			sessions[sessionId].context, // the user's session state
 			function (error, context) { // callback
 			if (error) {
-				console.log('oops!', error)
+				console.log('WIT ERROR --> ', error)
 			} else {
 				// Wit.ai ran all the actions
 				// Now it needs more messages
