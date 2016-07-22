@@ -1,6 +1,6 @@
 'use strict';
 
-const WIT_TOKEN = process.env.WIT_TOKEN
+const WIT_TOKEN = process.env.WIT_TOKEN || 'G7RTNJCCFCW7PIUUNW3L6S66IOF4ASJD'
 if (!WIT_TOKEN) {
   throw new Error('Missing WIT_TOKEN. Go to https://wit.ai/docs/quickstart to get one.')
 }
